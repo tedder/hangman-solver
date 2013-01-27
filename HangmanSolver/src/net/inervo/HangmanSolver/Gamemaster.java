@@ -1,6 +1,5 @@
 package net.inervo.HangmanSolver;
 
-import java.io.InputStream;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
