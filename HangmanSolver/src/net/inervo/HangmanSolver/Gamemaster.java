@@ -1,5 +1,6 @@
 package net.inervo.HangmanSolver;
 
+import java.io.InputStream;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
@@ -11,24 +12,24 @@ public class Gamemaster implements Iterator<HangmanGame> {
 	int maxGuesses;
 
 	public Gamemaster() {
-		this(5);
+		this(5, 10);
 	}
-	
-	public Gamemaster(int maxGuesses) {
+
+	public Gamemaster(int maxGuesses, int gamesToRun) {
 		this.maxGuesses = maxGuesses;
-		
+
 		games = new ArrayDeque<String>();
 
 		// create a list of games. For now, this is a static list. Later we'll read the dict.
-		games.add(new String("hug"));
-		games.add(new String("cat"));
-		games.add(new String("elephant"));
-		games.add(new String("walrus"));
+		Dictionary dict = new Dictionary();
+		for (int i = 0; i < gamesToRun; ++i) {
+			games.add(dict.getRandomEntry());
+		}
 	}
 
 	@Override
 	public boolean hasNext() {
-		return ! games.isEmpty();
+		return !games.isEmpty();
 	}
 
 	@Override

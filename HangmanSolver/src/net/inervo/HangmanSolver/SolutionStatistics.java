@@ -25,7 +25,7 @@ public class SolutionStatistics {
 	}
 	
 	private double getAverage(List<Integer> list) {
-		// this is private because it's just a quick calculation and we aren't worried about edge cases, it's just a simple utliity.
+		// this is private because it's just a quick calculation and we aren't worried about edge cases, it's just a simple utility.
 		if (list == null || list.size() == 0) { return 0; }
 		double sum = 0.0;
 		for(Integer i : list) {
@@ -35,10 +35,21 @@ public class SolutionStatistics {
 		return sum/list.size();
 	}
 	
+	private double getProbabilityWithinNPicks(List<Integer> list, int picks) {
+		// this is private because it's just a quick calculation and we aren't worried about edge cases, it's just a simple utility.
+		if (list == null || list.size() == 0) { return 0; }
+		
+		int count = 0;
+		for(Integer i : list) {
+			if (i < picks) ++count;
+		}
+		return ((double)count)/list.size();
+	}
+	
 	public String getStats() {
 		StringBuilder sb = new StringBuilder();
 		for( Entry<String, List<Integer>> entry : statball.entrySet() ) {
-			sb.append(entry.getKey() + "\tgames=" + entry.getValue().size() + "\tavg guesses=" + getAverage(entry.getValue()));
+			sb.append(entry.getKey() + "\tgames=" + entry.getValue().size() + "\tavg guesses=" + getAverage(entry.getValue()) + "\tprob below 5:" + getProbabilityWithinNPicks(entry.getValue(), 5) + "\n");
 		}
 		
 		return sb.toString();
