@@ -15,6 +15,9 @@ public class Runner implements Runnable {
 			runSolver(RandomAlphabetSolver.class, stat);
 			runSolver(SequentialAlphabetSolver.class, stat);
 			runSolver(ReverseSequentialAlphabetSolver.class, stat);
+			runSolver(MostPopularOurDictionaryAlphabetSolver.class, stat);
+			runSolver(MostPopularCornellAlphabetSolver.class, stat);
+			runSolver(MostPopularOxfordAlphabetSolver.class, stat);
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
