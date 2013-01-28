@@ -31,17 +31,14 @@
 
 These are listed in order of increasing accuracy:
 
-* *MostPopularOurDictionary*
-                   games=1000  avg_wrong_guesses=10.180000 prob_below_5=0.083000
-
-* *ReverseSequentialOrder* - guessing the letters in reverse order (z, y, x, w).
-* *RandomOrder* - choosing letters at random. This idea came from the randomization used to optimize QuickSort.
-* *SequentialOrder* - simply guessing the letters in order (a, b, c, d).
-* *MostPopularCornell* - using a list of popular letters calculated from 40k words at Cornell. (e, t, a, o .. q, j, z)
-* *MostPopularOxford* - a list of popular letters compiled from the Oxford Compact dictionary (e, t, a, o .. x, q, z).
-* *MostPopularOurDictionary* - letter popularity using the words.txt corpus.
-* *MostPopularOurDictionaryWithWords* - using letter popularity and naively guessing words based on the *set* of letters already guessed.
-* *MostPopularOurDictionaryWithWordRegex* - using letter popularity and a simple matching regex to capture repeated letters and positional information. (likely faster than the naive implementation in the previous solution) 
+* **ReverseSequentialOrder** - guessing the letters in reverse order (z, y, x, w).
+* **RandomOrder** - choosing letters at random. This idea came from the randomization used to optimize QuickSort.
+* **SequentialOrder** - simply guessing the letters in order (a, b, c, d).
+* **MostPopularCornell** - using a list of popular letters calculated from 40k words at Cornell. (e, t, a, o .. q, j, z)
+* **MostPopularOxford** - a list of popular letters compiled from the Oxford Compact dictionary (e, t, a, o .. x, q, z).
+* **MostPopularOurDictionary** - letter popularity using the words.txt corpus.
+* **MostPopularOurDictionaryWithWords** - using letter popularity and naively guessing words based on the *set* of letters already guessed.
+* **MostPopularOurDictionaryWithWordRegex** - using letter popularity and a simple matching regex to capture repeated letters and positional information. (likely faster than the naive implementation in the previous solution) 
 
 
 ## Sample output
