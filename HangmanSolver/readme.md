@@ -5,7 +5,7 @@
 * I avoided researching algorithms that are used to solve similar problems. Generally it's good to not reinvent the world but it felt outside the spirit of the problem.
 * getScore made it difficult to collect statistics, so the code avoids calling it.
 * There's zero thought given to different alphabets. The solutions will likely fail in an unknown and spectacular manner.
-* The one word-guessing algorithm (MostPopularOurDictionaryWithWords) has very poor performance (as a quick read would indicate). It's a proof-of-concept to show that word guessing is helpful.
+* The word-guessing algorithms have very poor performance (as a quick read would indicate). They are a quick proof-of-concept to show that word guessing is helpful.
 
 ## Next 'technical debt' steps:
 
@@ -76,7 +76,7 @@ net.inervo.hangman.solver.MostPopularOurDictionaryWithWordRegex      games=1000 
 
 ### Specific words given in problem:
 
-The number of words that were determined successfully by these algorithms are *substantially* lower than the implied solutions in the problem email. Admittedly, those were guessed with a combination of letter+word guesses, where six of eight solutions given here are purely based on letter guessing.
+The number of words that were determined successfully by these algorithms are **substantially** lower than the implied solutions in the problem email. Admittedly, those were guessed with a combination of letter+word guesses, where six of eight solutions given here are purely based on letter guessing.
 
 ```
 net.inervo.hangman.solver.MostPopularOurDictionary                   games=15    avg_wrong_guesses=09.533333 prob_below_5=0.066667
