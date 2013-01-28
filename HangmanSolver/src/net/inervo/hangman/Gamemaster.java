@@ -20,7 +20,7 @@ public class Gamemaster implements Iterator<HangmanGame> {
 
 		games = new ArrayDeque<String>();
 
-		// create a list of games. For now, this is a static list. Later we'll read the dict.
+		// create a list of games.
 		Dictionary dict = new Dictionary();
 		for (int i = 0; i < gamesToRun; ++i) {
 			games.add(dict.getRandomEntry());
