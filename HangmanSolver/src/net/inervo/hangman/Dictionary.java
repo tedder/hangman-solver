@@ -13,6 +13,7 @@ public class Dictionary {
 		return this.getClass().getResourceAsStream("words.txt");
 	}
 
+	@SuppressWarnings("unchecked") // for IOUtils.readLines.
 	public List<String> getDictionaryAsList() {
 		// cache it.
 		if (dict != null)
