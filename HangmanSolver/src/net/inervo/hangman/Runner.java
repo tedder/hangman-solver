@@ -1,11 +1,11 @@
 package net.inervo.hangman;
 
-import net.inervo.hangman.solver.MostPopularCornellAlphabetSolver;
-import net.inervo.hangman.solver.MostPopularOurDictionaryAlphabetSolver;
-import net.inervo.hangman.solver.MostPopularOxfordAlphabetSolver;
-import net.inervo.hangman.solver.RandomAlphabetSolver;
-import net.inervo.hangman.solver.ReverseSequentialAlphabetSolver;
-import net.inervo.hangman.solver.SequentialAlphabetSolver;
+import net.inervo.hangman.solver.MostPopularCornell;
+import net.inervo.hangman.solver.MostPopularOurDictionary;
+import net.inervo.hangman.solver.MostPopularOxford;
+import net.inervo.hangman.solver.RandomOrder;
+import net.inervo.hangman.solver.ReverseSequentialOrder;
+import net.inervo.hangman.solver.SequentialOrder;
 
 import org.commoncrawl.hangman.Guess;
 import org.commoncrawl.hangman.GuessingStrategy;
@@ -19,12 +19,12 @@ public class Runner implements Runnable {
 		SolutionStatistics stat = new SolutionStatistics();
 
 		try {
-			runSolver(RandomAlphabetSolver.class, stat);
-			runSolver(SequentialAlphabetSolver.class, stat);
-			runSolver(ReverseSequentialAlphabetSolver.class, stat);
-			runSolver(MostPopularOurDictionaryAlphabetSolver.class, stat);
-			runSolver(MostPopularCornellAlphabetSolver.class, stat);
-			runSolver(MostPopularOxfordAlphabetSolver.class, stat);
+			runSolver(RandomOrder.class, stat);
+			runSolver(SequentialOrder.class, stat);
+			runSolver(ReverseSequentialOrder.class, stat);
+			runSolver(MostPopularOurDictionary.class, stat);
+			runSolver(MostPopularCornell.class, stat);
+			runSolver(MostPopularOxford.class, stat);
 		} catch (InstantiationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

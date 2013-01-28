@@ -5,16 +5,16 @@ import org.commoncrawl.hangman.GuessLetter;
 import org.commoncrawl.hangman.GuessingStrategy;
 import org.commoncrawl.hangman.HangmanGame;
 
-public class SequentialAlphabetSolver implements GuessingStrategy {
-	char currentLetter = '_';
+public class ReverseSequentialOrder implements GuessingStrategy {
+	char currentLetter = '{';
 
 	@Override
 	public Guess nextGuess(HangmanGame game) {
 		// couldn't figure out an elegant way to start this.
-		if (currentLetter == '_') {
-			currentLetter = 'a';
+		if (currentLetter == '{') {
+			currentLetter = 'z';
 		} else {
-			++currentLetter;
+			--currentLetter;
 		}
 		
 		return new GuessLetter(currentLetter);

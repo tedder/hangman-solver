@@ -14,12 +14,12 @@ import org.commoncrawl.hangman.GuessLetter;
 import org.commoncrawl.hangman.GuessingStrategy;
 import org.commoncrawl.hangman.HangmanGame;
 
-public class MostPopularOurDictionaryAlphabetSolver implements GuessingStrategy {
+public class MostPopularOurDictionary implements GuessingStrategy {
 	final static List<Character> CALCULATED_LETTERS = getMostPopularLetters(new Dictionary().getDictionaryAsList());
 	List<Character> letters = new ArrayList<Character>(CALCULATED_LETTERS);
 	
 
-	public MostPopularOurDictionaryAlphabetSolver() {
+	public MostPopularOurDictionary() {
 
 	}
 

@@ -8,11 +8,11 @@ import org.commoncrawl.hangman.GuessLetter;
 import org.commoncrawl.hangman.GuessingStrategy;
 import org.commoncrawl.hangman.HangmanGame;
 
-public class RandomAlphabetSolver implements GuessingStrategy {
+public class RandomOrder implements GuessingStrategy {
 	List<Character> letters = null;
 	
 	
-	public RandomAlphabetSolver( ){
+	public RandomOrder( ){
 		// Arrays.asList doesn't work on primitives :-( so we'll do it by hand.
 		letters = new ArrayList<Character>();
 
