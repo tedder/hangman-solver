@@ -49,7 +49,7 @@ public class SolutionStatistics {
 	public String getStats() {
 		StringBuilder sb = new StringBuilder();
 		for( Entry<String, List<Integer>> entry : statball.entrySet() ) {
-			sb.append(entry.getKey() + "\tgames=" + entry.getValue().size() + "\tavg guesses=" + getAverage(entry.getValue()) + "\tprob below 5:" + getProbabilityWithinNPicks(entry.getValue(), 5) + "\n");
+			sb.append(String.format("%-80s  games=%-5d avg_guesses=%09.6f prob_below_5=%7.6f\n", entry.getKey(), entry.getValue().size(), getAverage(entry.getValue()), getProbabilityWithinNPicks(entry.getValue(), 5)));
 		}
 		
 		return sb.toString();
