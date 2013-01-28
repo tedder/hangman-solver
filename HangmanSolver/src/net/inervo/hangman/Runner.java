@@ -42,7 +42,11 @@ public class Runner implements Runnable {
 	// http://stackoverflow.com/questions/2859589/passing-interface-class-as-a-parameter-in-java
 	protected void runSolver(Class<? extends GuessingStrategy> solverClass, SolutionStatistics stat)
 			throws InstantiationException, IllegalAccessException {
+
 		Gamemaster gamelist = new Gamemaster(99, 1000);
+		// Gamemaster gamelist = new Gamemaster(99, Arrays.asList("comaker", "cumulate", "eruptive",
+		// "factual", "monadism", "mus", "nagging", "oses", "remembered", "spodumenes", "stereoisomers",
+		// "toxics", "trichromats", "triose", "uniformed"));
 
 		while (gamelist.hasNext()) {
 			GuessingStrategy s = solverClass.newInstance();
@@ -55,9 +59,9 @@ public class Runner implements Runnable {
 	public void doGame(GuessingStrategy s, HangmanGame h) {
 		while (h.gameStatus().equals(Status.KEEP_GUESSING)) {
 			Guess g = s.nextGuess(h);
-			//System.out.println("guess: " + g + " solved_state: " + h.getGuessedSoFar());
+			// System.out.println("guess: " + g + " solved_state: " + h.getGuessedSoFar());
 			g.makeGuess(h);
-			//System.out.println(" .. solved_state: " + h.getGuessedSoFar());
+			// System.out.println(" .. solved_state: " + h.getGuessedSoFar());
 		}
 	}
 

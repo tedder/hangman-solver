@@ -17,6 +17,8 @@
 ## Next algorithmic steps:
 
 * No effort has been taken to use existing information to choose the next letter. In other words, "given Q, suggest U".
+* Add word guessing. If there are less possible words than remaining letters, this would be very effective.
+* A corpus including word popularity would likely work well with human-chosen words.
 * Research common/related algorithms.
 
 ## Changes to provided code:
@@ -50,6 +52,19 @@ net.inervo.hangman.solver.MostPopularCornell            games=1000  avg_guesses=
 net.inervo.hangman.solver.MostPopularOxford             games=1000  avg_guesses=10.600000 prob_below_5=0.059000
 net.inervo.hangman.solver.SequentialOrder               games=1000  avg_guesses=13.736000 prob_below_5=0.001000
 net.inervo.hangman.solver.ReverseSequentialOrder        games=1000  avg_guesses=17.340000 prob_below_5=0.001000
+```
+
+### Specific words given in problem:
+
+The number of words that were determined successfully by these six algorithms are *substantially* lower than the implied solutions in the problem email. Admittedly, those were guessed with a combination of letter+word guesses, where the six solutions given here are purely based on letter guessing.
+
+```
+net.inervo.hangman.solver.MostPopularOurDictionary      games=15    avg_guesses=09.533333 prob_below_5=0.066667
+net.inervo.hangman.solver.RandomOrder                   games=15    avg_guesses=16.266667 prob_below_5=0.000000
+net.inervo.hangman.solver.MostPopularCornell            games=15    avg_guesses=09.600000 prob_below_5=0.133333
+net.inervo.hangman.solver.MostPopularOxford             games=15    avg_guesses=09.800000 prob_below_5=0.133333
+net.inervo.hangman.solver.SequentialOrder               games=15    avg_guesses=13.666667 prob_below_5=0.000000
+net.inervo.hangman.solver.ReverseSequentialOrder        games=15    avg_guesses=17.266667 prob_below_5=0.000000
 ```
 
 ## Output commentary

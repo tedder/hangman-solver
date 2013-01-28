@@ -3,6 +3,7 @@ package net.inervo.hangman;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
+import java.util.List;
 
 import org.commoncrawl.hangman.HangmanGame;
 
@@ -24,6 +25,13 @@ public class Gamemaster implements Iterator<HangmanGame> {
 		for (int i = 0; i < gamesToRun; ++i) {
 			games.add(dict.getRandomEntry());
 		}
+	}
+	
+	public Gamemaster(int maxGuesses, List<String> specificWords) {
+		this.maxGuesses = maxGuesses;
+
+		games = new ArrayDeque<String>();
+		games.addAll(specificWords);
 	}
 
 	@Override
