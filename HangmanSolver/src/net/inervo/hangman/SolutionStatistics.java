@@ -57,11 +57,12 @@ public class SolutionStatistics {
 	public String getStats() {
 		// just a little formatting trick.
 		int classlength = getMaxKey(statball.keySet()) + 4;
-		
+
 		StringBuilder sb = new StringBuilder();
 		for (Entry<String, List<Integer>> entry : statball.entrySet()) {
-			sb.append(String.format("%-" + classlength + "s  games=%-5d avg_guesses=%09.6f prob_below_5=%7.6f\n", entry.getKey(), entry
-					.getValue().size(), getAverage(entry.getValue()), getProbabilityWithinNPicks(entry.getValue(), 5)));
+			sb.append(String.format("%-" + classlength + "s  games=%-5d avg_wrong_guesses=%09.6f prob_below_5=%7.6f\n",
+					entry.getKey(), entry.getValue().size(), getAverage(entry.getValue()),
+					getProbabilityWithinNPicks(entry.getValue(), 5)));
 		}
 
 		return sb.toString();
@@ -70,9 +71,11 @@ public class SolutionStatistics {
 	private int getMaxKey(Set<String> set) {
 		int max = 0;
 		for (String entry : set) {
-			if (entry.length() > max) { max = entry.length(); }
+			if (entry.length() > max) {
+				max = entry.length();
+			}
 		}
-		
+
 		return max;
 	}
 }
