@@ -1,4 +1,4 @@
-package net.inervo.HangmanSolver;
+package net.inervo.hangman;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

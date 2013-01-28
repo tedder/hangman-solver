@@ -1,4 +1,4 @@
-package net.inervo.HangmanSolver;
+package net.inervo.hangman.solver;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,6 +6,8 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import net.inervo.hangman.Dictionary;
 
 import org.commoncrawl.hangman.Guess;
 import org.commoncrawl.hangman.GuessLetter;

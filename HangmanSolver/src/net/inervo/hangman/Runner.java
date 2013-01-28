@@ -1,4 +1,11 @@
-package net.inervo.HangmanSolver;
+package net.inervo.hangman;
+
+import net.inervo.hangman.solver.MostPopularCornellAlphabetSolver;
+import net.inervo.hangman.solver.MostPopularOurDictionaryAlphabetSolver;
+import net.inervo.hangman.solver.MostPopularOxfordAlphabetSolver;
+import net.inervo.hangman.solver.RandomAlphabetSolver;
+import net.inervo.hangman.solver.ReverseSequentialAlphabetSolver;
+import net.inervo.hangman.solver.SequentialAlphabetSolver;
 
 import org.commoncrawl.hangman.Guess;
 import org.commoncrawl.hangman.GuessingStrategy;

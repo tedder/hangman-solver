@@ -1,4 +1,4 @@
-package net.inervo.HangmanSolver;
+package net.inervo.hangman.solver;
 
 import java.util.ArrayList;
 import java.util.List;

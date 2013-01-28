@@ -1,4 +1,4 @@
-package net.inervo.HangmanSolver;
+package net.inervo.hangman;
 
 import org.apache.commons.io.IOUtils;
 

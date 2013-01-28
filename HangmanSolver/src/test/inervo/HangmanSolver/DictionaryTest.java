@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
-import net.inervo.HangmanSolver.Dictionary;
+import net.inervo.hangman.Dictionary;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
